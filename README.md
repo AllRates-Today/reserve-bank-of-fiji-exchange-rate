@@ -85,10 +85,10 @@ const pair = await getRate('FJD', 'USD', { apiKey: 'art_live_...' });
 {
   bank: 'rbf',
   name: 'Reserve Bank of Fiji',
-  rate_date: '2026-09-08',   // Reserve Bank of Fiji's own publication date
+  rate_date: '2026-09-24',   // Reserve Bank of Fiji's own publication date
   source: 'FJD',
   target: 'USD',
-  rate: 0.4517,
+  rate: 0.4445,
   rate_type: 'reference',
   derived: false,
   method: 'published',
@@ -113,9 +113,9 @@ console.log(table.rate_date, table.rates.length);
 {
   bank: 'rbf',
   name: 'Reserve Bank of Fiji',
-  rate_date: '2026-09-08',
+  rate_date: '2026-09-24',
   rates: [
-    { "base": "FJD", "quote": "USD", "type": "reference", "value": 0.4517 },
+    { "base": "FJD", "quote": "USD", "type": "reference", "value": 0.4445 },
     // … the rest of the published table (8 currencies vs FJD)
   ],
   disclaimer: '…'
@@ -155,7 +155,7 @@ Paid plans. One resolved rate per publication date — ready for charting, reval
 import { getHistory } from 'reserve-bank-of-fiji-exchange-rate';
 
 const series = await getHistory(
-  { source: 'FJD', target: 'USD', from: '2026-01-01', to: '2026-09-08' },
+  { source: 'FJD', target: 'USD', from: '2026-01-01', to: '2026-09-24' },
   { apiKey: 'art_live_...' }
 );
 ```
@@ -168,11 +168,11 @@ const series = await getHistory(
   source: 'FJD',
   target: 'USD',
   from: '2026-01-01',
-  to: '2026-09-08',
+  to: '2026-09-24',
   count: 152,
   rates: [
     // one entry per publication date
-    { date: '2026-09-08', rate: 0.4517, rate_type: 'reference', derived: false, method: 'published' },
+    { date: '2026-09-24', rate: 0.4445, rate_type: 'reference', derived: false, method: 'published' },
     // …
   ],
   disclaimer: '…'
