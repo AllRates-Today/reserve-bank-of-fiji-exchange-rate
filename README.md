@@ -37,21 +37,23 @@ The open endpoint serves the *latest* table only and asks for a visible attribut
 
 ## 📈 Latest published table
 
-Today's full Reserve Bank of Fiji table, straight from the central bank's latest publication. On GitHub it is refreshed by [a daily Action](.github/workflows/daily-table.yml) that reads the keyless endpoint above and commits only when the central bank publishes a new table; the copy on npm is as of the package's publish date.
+[![Latest Reserve Bank of Fiji table](https://allratestoday.com/api/open/central-bank/rbf/table.svg)](https://allratestoday.com/central-bank-rates-api/rbf/)
+
+The image is rendered live from the keyless endpoint above, so it follows the central bank's publications on npm and on GitHub alike without a new release. The text copy below is there for search and copy-paste: on GitHub [a daily Action](.github/workflows/daily-table.yml) refreshes it whenever the central bank publishes a new table; on npm it is as of the package's publish date.
 
 <!-- daily-table:start -->
-Published **2026-10-05** by Reserve Bank of Fiji (the API currently flags this table as stale) — 8 rates. Updated 2026-10-10.
+Published **2026-10-09** by Reserve Bank of Fiji — 8 rates. Updated 2026-10-12.
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| FJD | AUD | reference | 0.6357 |
-| FJD | CHF | reference | 0.3661 |
-| FJD | EUR | reference | 0.3924 |
-| FJD | GBP | reference | 0.3336 |
-| FJD | JPY | reference | 69.68 |
-| FJD | NZD | reference | 0.7868 |
-| FJD | USD | reference | 0.4417 |
-| FJD | XDR | reference | 0.326199 |
+| FJD | AUD | reference | 0.6346 |
+| FJD | CHF | reference | 0.3673 |
+| FJD | EUR | reference | 0.3939 |
+| FJD | GBP | reference | 0.3339 |
+| FJD | JPY | reference | 69.74 |
+| FJD | NZD | reference | 0.7881 |
+| FJD | USD | reference | 0.4416 |
+| FJD | XDR | reference | 0.326666 |
 
 Source: [Official rates published by RBF, served by AllRatesToday](https://allratestoday.com/central-bank-rates-api/rbf/). Rates are as printed by the central bank; AllRatesToday is not affiliated with it.
 <!-- daily-table:end -->
@@ -245,6 +247,7 @@ curl "https://allratestoday.com/api/v1/central-bank/rbf/latest?format=xml&api_ke
 - MCP server: `npx -y @allratestoday/central-bank-mcp` (stdio) or the hosted endpoint `https://allratestoday.com/api/mcp` — tools for official rates, history, cross-bank comparison and publication calendars
 - Already using the general SDK or MCP server? Since 2026-10-01 [`@allratestoday/sdk`](https://www.npmjs.com/package/@allratestoday/sdk) 1.4+ has `officialRates('rbf')` and [`@allratestoday/mcp-server`](https://www.npmjs.com/package/@allratestoday/mcp-server) 0.6+ has a `get_official_rates` tool — both return this source's latest table with no key, so you can add it without a second dependency
 - Claude Code plugin (no key): `/plugin marketplace add AllRates-Today/claude-code-plugin` then `/plugin install allratestoday@allratestoday` — bundles both MCP servers plus an `/official-rate rbf ...` command
+- Need dated tables or history for an evaluation? Agents can self-issue a trial key with no signup: `POST https://allratestoday.com/api/agent/keys` (send `Content-Type: application/json`) returns a 100-call key valid 7 days; the MCP servers expose it as `request_trial_key`
 - Machine-readable site guide: [llms.txt](https://allratestoday.com/llms.txt) · [for-ai-agents](https://allratestoday.com/for-ai-agents/)
 
 ## ⚖️ Published vs derived rates
