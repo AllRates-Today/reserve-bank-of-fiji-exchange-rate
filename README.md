@@ -32,7 +32,7 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-27 by Reserve Bank of Fiji — 8 rates. Updated 2026-10-30.</summary>
+<summary>Table as text: published 2026-10-27 by Reserve Bank of Fiji (the API currently flags this table as stale) — 8 rates. Updated 2026-11-01.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
