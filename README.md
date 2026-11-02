@@ -32,18 +32,16 @@ The image is rendered live from the keyless endpoint, so it follows the central 
 
 <!-- daily-table:start -->
 <details>
-<summary>Table as text: published 2026-10-27 by Reserve Bank of Fiji (the API currently flags this table as stale) — 8 rates. Updated 2026-11-01.</summary>
+<summary>Table as text: published 2026-11-02 by Reserve Bank of Fiji — 6 rates. Updated 2026-11-02.</summary>
 
 | Base | Quote | Type | Rate |
 | --- | --- | --- | ---: |
-| FJD | AUD | reference | 0.6326 |
-| FJD | CHF | reference | 0.3675 |
-| FJD | EUR | reference | 0.3972 |
-| FJD | GBP | reference | 0.3327 |
-| FJD | JPY | reference | 69.93 |
-| FJD | NZD | reference | 0.7814 |
-| FJD | USD | reference | 0.4439 |
-| FJD | XDR | reference | 0.327645 |
+| FJD | AUD | reference | 0.6309 |
+| FJD | EUR | reference | 0.3973 |
+| FJD | GBP | reference | 0.3311 |
+| FJD | JPY | reference | 69.82 |
+| FJD | NZD | reference | 0.787 |
+| FJD | USD | reference | 0.4433 |
 
 </details>
 
